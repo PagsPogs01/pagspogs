@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+    a {text-align:center;
+    width: 800px}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+
+}
+
+.left h2 {
+  padding-left: 8px;
+
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+    
+}
+    .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.logo {
+  height: 100px;
+   width:100%;
+  background-image: url("photo/backlogo.jpg")
+}
+</style>
+</head>
+<body>
+    <div class="logo">
+<img src="photo/logo.png" style="height:100px;">
+    
+    </div>
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="https://drive.google.com/file/d/1I4PdDpx7XbZn297iQgI4hIpvOTUAtbnj/view?usp=share_link"><img src="layout/cocomelon_birthday_12-29-22.jpg" style="height:300px;"><br>Cocomelon Birthday 12-29-22</a></li>
+      <li><a href="https://drive.google.com/file/d/1cAT5ax5YKrFup1TQ1ICNDfITgdfSeuev/view?usp=share_link"><img src="layout/cars_birthday_12-29-22.jpg" style="height:300px;"><br>Cars Birthday 12-29-29</a></li>
+      <li><a href="https://drive.google.com/file/d/1KbkDDFdgD6cPZHPcDh5X-mxlRcxYNsO2/view?usp=share_link"><img src="layout/nemo_birthday_01-01-23.jpg" style="height:300px;"><br>Nemo Birthday 01-01-23</a></li>
+      <li><a href="https://drive.google.com/file/d/1Mzjzh2T7VwFt-7sxAWLVvcG1ogFAISJC/view?usp=share_link"><img src="layout/frozen_birthday_01-01-23.jpg" style="height:300px;"><br>Frozen Birthday 01-01-23</a></li>
+      <li><a href="https://drive.google.com/file/d/1Y0sHzhWKOkl6kqvzXEZL9ivFzpzl7YBH/view?usp=share_link"><img src="layout/bigboss_birthday_01-01-23.jpg" style="height:300px;"><br>Baby Boss Birthday 01-01-23</a></li>
+      <li><a href="0https://drive.google.com/file/d/12QwDuaM5snSDFq3NO4yh5LWPOFJpG64I/view?usp=share_link"><img src="layout/wedding_violet-01-07-23.jpg" style="height:300px;"><br>Wedding Violet 01-07-23</a></li>
+      <li><a href="https://drive.google.com/file/d/19NOVmCnPLpz3V0iu0i6CH2F19_wiDySQ/view?usp=share_link"><img src="layout/paw_patrol_birthday-01-06-23.jpg" style="height:300px;"><br>Paw Patrol Birthday 01-06-23</a></li>
+<!--      <li><a href=""><img src="layout/" style="height:300px;"><br>Birthday</a></li>
+-->
+    </ul>
+  </div>
+
+
+</div>
+
+    
+    
+    
+
+    
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+    
+
+</body>
+</html>
